@@ -82,6 +82,10 @@
    
 }
 
+.carousel{
+  touch-action: pan-y;
+}
+
 .carousel .control-dots{
   position: static !important;
   li{
