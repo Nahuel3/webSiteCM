@@ -1,0 +1,171 @@
+// Estilos para el componente de marketing SECTION.JSX
+.marketing-container {
+    text-align: center;
+    background: url('https://swann.marketing/wp-content/uploads/2023/04/agencia-de-marketing-digital-miami-argentina-.jpg') no-repeat center center fixed; // Configuración de la imagen de fondo
+    background-size: cover; // Ajusta el tamaño de la imagen de fondo
+    color: #fff; // Texto en blanco
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh; // Asegura que el contenedor ocupe el 100% de la altura de la pantalla
+    position: relative; // Establecer posición relativa para contener los rectángulos
+ 
+  
+    // Estilos para el título h2
+    h2 {
+      font-size: 55px;
+      margin: 20px 0;
+      color: #000;
+    }
+  
+    // Estilos para el subtítulo h3
+    h3 {
+      font-size: 25px;
+      margin: 10px 0; // Añade margen vertical
+      margin-bottom: 20px;
+      color: #000;
+    }
+  
+    // Estilos para el párrafo p
+    p {
+      font-size: 25px;
+      margin: 10px 0; // Añade margen vertical
+      color: #000;
+    }
+  
+    // Estilos para el botón
+    button {
+      background-color: #6200ff; // Color de fondo azul
+      color: #fff; // Texto en blanco
+      font-size: 26px;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      margin-top: 10px; // Añade margen superior
+      height: 50px;
+      width: 200px;
+      border-radius: 5px; // Agrega bordes redondeados al botón
+    }
+  
+    // Estilos para el botón al pasar el mouse
+    button:hover {
+      background-color: #0056b3; // Color de fondo azul más oscuro al pasar el mouse
+    }
+  }
+
+ 
+
+ 
+/* Estilos para el contenedor de "Bienvenido" */
+.welcome-container {
+    background-image: url('https://swann.marketing/wp-content/uploads/2023/03/swann-marketing-banners-web-1-1.png') ;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+    line-height: 1.9em;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 90%;  
+    padding: 20px;
+    background-attachment: fixed; /* Agregar efecto paralaje */
+    
+  }
+  
+  /* Estilos para el texto dentro del contenedor de "Bienvenido" */
+  .welcome-container h2, .welcome-container h3 {
+    font-size: 44px;
+    margin-bottom: 30px;
+    color: #000; /* Cambiar el color de la fuente a negro */
+  }
+  
+  .blue-rectanglesPadre {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan cuando no haya espacio */
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    align-items: center; /* Centra verticalmente los rectángulos */
+}
+
+.blue-rectangle {
+    background-color: #6267d9;
+    color: #fff;
+    padding: 20px; /* Ajusta el padding vertical */
+    border-radius: 10px;
+    width: 15%;
+    min-width: 250px; /* Establece un ancho mínimo para evitar que se hagan demasiado pequeños */
+    margin: 10px; /* Añade margen entre los rectángulos */
+    height: 300px; /* Establece la altura fija para todos los rectángulos */
+
+    /* Estilos para imágenes pequeñas */
+    .imagen-pequeña {
+    max-width: 70px; /* Ancho máximo deseado */
+    max-height: 70px; /* Altura máxima deseada */
+    border-radius: 50%;
+  }
+}
+
+.blue-rectangle h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #fff; /* Asegúrate de que el color del texto sea visible en los rectángulos */
+}
+
+.blue-rectangle p {
+    font-size: 15px;
+    color: #fff; /* Asegúrate de que el color del texto sea visible en los rectángulos */
+}
+
+/* Define la animación */
+@keyframes slideFromRight {
+    0% {
+      
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Aplica la animación a los elementos con esta clase */
+  .slide-from-right {
+    animation: slideFromRight 3.5s ease-in-out; /* Puedes ajustar la duración y la función de temporización según tus preferencias */
+  }
+
+  /* Define la animación para salir desde arriba */
+@keyframes slideFromTop {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Aplica la animación a los elementos con esta clase */
+  .slide-from-top {
+    animation: slideFromTop 3.5s ease-in-out;
+  }
+
+  /* Media query para pantallas más pequeñas, como tablets y teléfonos */
+@media (max-width: 640px) {
+
+   /* Estilos para el texto dentro del contenedor de "Bienvenido" */
+   .welcome-container h2, .welcome-container h3 {
+    line-height: 1.2; /* Ajusta el espacio entre líneas */
+    font-size: 44px;
+    margin-bottom: 30px;
+    color: #000000; /* Cambiar el color de la fuente a negro */
+  }
+
+  }
+

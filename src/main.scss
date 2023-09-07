@@ -1,0 +1,159 @@
+/* Agrega estos estilos en tu archivo main.scss */
+.main-content {
+
+  background: linear-gradient(-45deg, #f5f3f3, #ba9ea9, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 5s ease infinite;
+  min-height: 100vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  .carousel {
+    
+    .carousel-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+    }
+
+    .carousel-content {
+      display: flex;
+      max-width: 1100px; /* Establece el ancho máximo deseado */
+      margin: 0 auto; /* Centra el contenido horizontalmente */      
+      gap: 50px;
+      
+    }
+
+    .text-container {    
+      width: 50%;
+      padding-right: 20px; /* Agrega espacio entre el texto y la imagen */      
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #f5f5f5a6; /* Color de fondo para el texto */
+      border-radius: 8px; /* Borde redondeado */
+      padding: 20px; /* Espacio interno */
+      color: #333333;
+      font-size: 25px;
+      text-shadow: 4px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra en el texto */
+
+
+      h2{
+        animation: canguro 2s infinite; /* Aplica la animación "canguro" de 2 segundos en bucle */
+        text-shadow: 4px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra en el texto */
+      }
+
+    }
+
+
+    .image-container {
+      text-align: center; /* Centra la imagen horizontalmente */      
+      border-radius: 8px; /* Borde redondeado */
+      width: 50%;
+      
+    }
+    
+
+    img {
+      max-width: 100%; /* Ajusta el tamaño máximo de la imagen */
+      height: auto; /* Mantiene la relación de aspecto de la imagen */
+      
+    }
+  }
+
+  /* Personaliza los puntos para seleccionar la persona en el carrusel */
+  .carousel .thumbs-wrapper {
+    margin-top: 20px; /* Añade espacio entre el carrusel y los puntos */
+  }
+
+ 
+
+  .carousel .thumb.selected,
+  .carousel .thumb:hover {
+    background-color: #333; /* Color de fondo cuando se selecciona o se pasa el cursor */
+  }
+}
+
+.carousel-status{
+  display: none;
+   
+}
+
+.carousel .control-dots{
+  position: static !important;
+  li{
+    height: 18px !important; 
+    width: 18px !important;
+   }
+}
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/* Media query para pantallas más pequeñas, como tablets y teléfonos */
+@media (max-width: 1100px) {
+
+  .main-content{
+    .carousel .carousel-content {
+      flex-direction: column; /* Cambia a una disposición de columna */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .carousel .text-container {
+      font-size: 20px;
+      
+      max-width: none; /* Elimina el ancho máximo */
+     
+    }
+
+  }
+}
+
+/* Media query para pantallas más pequeñas, como tablets y teléfonos */
+@media (max-width: 550px) {
+
+  .main-content{
+   
+  
+    .carousel .text-container {
+      font-size: 16px;
+
+    }
+
+  }
+}
+
+
+@keyframes canguro {
+  0% {
+    transform: translateY(0); /* Sin desplazamiento vertical al principio */
+  }
+  25% {
+    transform: translateY(-100%); /* Mueve el texto hacia arriba al 25% del tiempo */
+  }
+  50% {
+    transform: translateY(-200%); /* Mueve el texto más hacia arriba al 50% del tiempo */
+  }
+  75% {
+    transform: translateY(-300%); /* Mueve el texto más hacia arriba al 75% del tiempo */
+  }
+  100% {
+    transform: translateY(0); /* Vuelve a la posición original al 100% del tiempo */
+  }
+}
+
