@@ -50,17 +50,19 @@
 
 
     .image-container {
-      text-align: center; /* Centra la imagen horizontalmente */      
-      border-radius: 8px; /* Borde redondeado */
-      width: 50%;
-      
+    text-align: center; /* Centra la imagen horizontalmente */      
+    border-radius: 8px; /* Borde redondeado */
+    width: 50%;
+    border-width: 3px;
+    border-style: dashed;
+    border-color: #6267d9;
     }
     
 
     img {
       max-width: 100%; /* Ajusta el tamaño máximo de la imagen */
       height: auto; /* Mantiene la relación de aspecto de la imagen */
-      
+     
     }
   }
 
@@ -81,11 +83,6 @@
   display: none;
    
 }
-
-
-
-
-
 
 .carousel .control-dots{
   position: static !important;
