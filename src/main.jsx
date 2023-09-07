@@ -54,6 +54,7 @@ const Main = () => {
         showThumbs={false}
         selectedItem={selectedPersona} // Establece la persona seleccionada
         onChange={(index) => setSelectedPersona(index)} // Maneja el cambio de persona seleccionada
+        data-interval="false" // Deshabilitar el cambio de diapositiva táctil
       >
         {personas.map((persona, index) => (
           <div
