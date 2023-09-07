@@ -10,7 +10,7 @@ const MarketingComponent = () => {
         <h2>Marketing Digital para Empresas y Emprendedores</h2>
         <h3>WE ARE A FULL SERVICE</h3>
         <p>¡ANIMATE A LLEVAR TU NEGOCIO LEJOS!</p>
-        <a href="https://www.instagram.com/?hl=es" target="_blank" rel="noreferrer">
+        <a href="https://wa.me/5491135206645?text=¡Hola! Quisiera hacerte una pregunta." target="_blank" rel="noreferrer">
         <button>Contacto</button>
         </a>
       </div>

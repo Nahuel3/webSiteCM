@@ -79,7 +79,7 @@ const Navbar = () => {
           </li>
           <li>
             <a
-              href="https://www.instagram.com/?hl=es"
+              href="https://wa.me/5491135206645?text=¡Hola! Quisiera hacerte una pregunta."
               className={selectedButton === 'CONTACTO' ? 'selected' : ''}
               onClick={() => handleButtonClick('CONTACTO')}
               target="_blank" rel="noreferrer"
