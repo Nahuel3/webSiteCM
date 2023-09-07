@@ -47,14 +47,18 @@ const Main = () => {
     };
   }, []);
 
+ 
+
   return (
     <div className="main-content">
       <Carousel
         showArrows={false} // Desactiva las flechas del carrusel
         showThumbs={false}
+        swipeable={false} // Desactiva el desplazamiento táctil
         selectedItem={selectedPersona} // Establece la persona seleccionada
         onChange={(index) => setSelectedPersona(index)} // Maneja el cambio de persona seleccionada
-        data-interval="false" // Deshabilitar el cambio de diapositiva táctil
+       
+        
       >
         {personas.map((persona, index) => (
           <div

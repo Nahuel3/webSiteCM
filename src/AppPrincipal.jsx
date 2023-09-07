@@ -10,6 +10,7 @@ function App() {
       <Navbar />
       <Section></Section>
       <Main></Main>
+      
     </div>
   );
 }
