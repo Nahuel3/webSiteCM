@@ -83,8 +83,13 @@
 }
 
 .carousel-root{
+  overflow: hidden;
+}
+
+.carousel-slider {
   touch-action: pan-y;
 }
+
 
 .carousel .control-dots{
   position: static !important;
