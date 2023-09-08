@@ -69,9 +69,10 @@
     line-height: 1.9em;
     border-radius: 10px;
     margin: 20px auto;
-    width: 90%;  
+     
     padding: 20px;
     background-attachment: fixed; /* Agregar efecto paralaje */
+    overflow-x: hidden;
     
   }
   
