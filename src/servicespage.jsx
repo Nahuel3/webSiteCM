@@ -1,48 +1,48 @@
-import React, {useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Service.scss'; // Importa el archivo SASS
 
 const ServicesPage = () => {
 
-const [animatedText, setAnimatedText] = useState('');
-const [animatedTextFormulario, setAnimatedTextFormulario] = useState('');
+    const [animatedText, setAnimatedText] = useState('');
+    const [animatedTextFormulario, setAnimatedTextFormulario] = useState('');
 
-  const textToAnimate = "¡VERTE CRECER ES VERNOS CRECER Y ES NUESTRA MISIÓN! ";
-  const textToAnimateFormulario = "Hablanos al privado para saber mas sobre tu proyecto";
+    const textToAnimate = "¡VERTE CRECER ES VERNOS CRECER Y ES NUESTRA MISIÓN! ";
+    const textToAnimateFormulario = "Hablanos al privado para saber mas sobre tu proyecto";
 
-  useEffect(() => {
-    let currentIndex = 0;
-    const interval = setInterval(() => {
-      if (currentIndex <= textToAnimate.length) {
-        setAnimatedText(textToAnimate.slice(0, currentIndex));
-        currentIndex++;
-      } else {
-        currentIndex = 0;
-      }
-    }, 100); // Ajusta la velocidad de escritura aquí (en milisegundos)
+    useEffect(() => {
+        let currentIndex = 0;
+        const interval = setInterval(() => {
+            if (currentIndex <= textToAnimate.length) {
+                setAnimatedText(textToAnimate.slice(0, currentIndex));
+                currentIndex++;
+            } else {
+                currentIndex = 0;
+            }
+        }, 100); // Ajusta la velocidad de escritura aquí (en milisegundos)
 
-    return () => clearInterval(interval);
-  }, []);
+        return () => clearInterval(interval);
+    }, []);
 
-  useEffect(() => {
-    let currentIndex = 0;
-    const interval = setInterval(() => {
-      if (currentIndex <= textToAnimateFormulario.length) {
-        setAnimatedTextFormulario(textToAnimateFormulario.slice(0, currentIndex));
-        currentIndex++;
-      } else {
-        currentIndex = 0;
-      }
-    }, 100); // Ajusta la velocidad de escritura aquí (en milisegundos)
+    useEffect(() => {
+        let currentIndex = 0;
+        const interval = setInterval(() => {
+            if (currentIndex <= textToAnimateFormulario.length) {
+                setAnimatedTextFormulario(textToAnimateFormulario.slice(0, currentIndex));
+                currentIndex++;
+            } else {
+                currentIndex = 0;
+            }
+        }, 100); // Ajusta la velocidad de escritura aquí (en milisegundos)
 
-    return () => clearInterval(interval);
-  }, []);
+        return () => clearInterval(interval);
+    }, []);
 
 
 
     return (
         <div>
-             {/* Título "¿Por qué elegirnos?" con efecto de letras */}
-             <div className="chooseUs">
+            {/* Título "¿Por qué elegirnos?" con efecto de letras */}
+            <div className="chooseUs">
                 <h2>¿Por qué elegirnos?</h2>
                 <p className="subtitle">
                     Nuestra relación con cada cliente es fundamental, somos parte de tu empresa, somos aliados,
@@ -113,15 +113,18 @@ const [animatedTextFormulario, setAnimatedTextFormulario] = useState('');
             </div>
 
             {/* Título "¿Por qué elegirnos?" con efecto de letras */}
-             <div className="chooseUsParteAbajo">
+            <div className="chooseUsParteAbajo">
                 <h2>¿Ya sabes que servicio es para vos?</h2>
                 <p className="subtitle">
-                ¡Empecemos a crecer!
+                    ¡Empecemos a crecer!
                 </p>
-                    <span className="animated-text">{animatedTextFormulario}</span>
+                <span className="animated-text">{animatedTextFormulario}</span>
+                <a href="https://wa.me/5491135206645?text=¡Hola! Quisiera hacerte una pregunta." target="_blank" rel="noreferrer">
+                    <button>Contacto</button>
+                </a>
             </div>
 
-           
+
         </div>
     );
 };

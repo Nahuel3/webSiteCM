@@ -36,14 +36,14 @@
   .service-group {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
+    flex-wrap: wrap; 
     height: 100%; 
 
     .service {
       width: 25%;
       min-width: 250px; 
       margin: 10px;
+      margin-bottom: 20px;
       padding: 20px;
       background: linear-gradient(to bottom, #86c3ff, #924fae); 
       border-radius: 5px;
@@ -113,7 +113,7 @@
   }
 
   .chooseUsParteAbajo{
-    clip-path: polygon(0 29%, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
     background-color: black;
     height: 400px;
     text-align: center;
@@ -136,6 +136,24 @@
   }   
   span{
     color: rgba(232, 255, 105, 0.648);
+  }
+
+  // Estilos para el botón
+  button {
+    background-color: #bb00ff; // Color de fondo azul
+    color: #fff; // Texto en blanco
+    font-size: 26px;
+    border: none;   
+    cursor: pointer;
+    margin-top: 20px; // Añade margen superior
+    height: 50px;
+    width: 200px;
+    border-radius: 15px; // Agrega bordes redondeados al botón
+  }
+
+  // Estilos para el botón al pasar el mouse
+  button:hover {
+    background-color: #b30000; // Color de fondo azul más oscuro al pasar el mouse
   }
 }
   
