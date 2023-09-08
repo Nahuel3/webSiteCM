@@ -4,7 +4,10 @@ import './Service.scss'; // Importa el archivo SASS
 const ServicesPage = () => {
 
 const [animatedText, setAnimatedText] = useState('');
+const [animatedTextFormulario, setAnimatedTextFormulario] = useState('');
+
   const textToAnimate = "¡VERTE CRECER ES VERNOS CRECER Y ES NUESTRA MISIÓN! ";
+  const textToAnimateFormulario = "Hablanos al privado para saber mas sobre tu proyecto";
 
   useEffect(() => {
     let currentIndex = 0;
@@ -19,6 +22,22 @@ const [animatedText, setAnimatedText] = useState('');
 
     return () => clearInterval(interval);
   }, []);
+
+  useEffect(() => {
+    let currentIndex = 0;
+    const interval = setInterval(() => {
+      if (currentIndex <= textToAnimateFormulario.length) {
+        setAnimatedTextFormulario(textToAnimateFormulario.slice(0, currentIndex));
+        currentIndex++;
+      } else {
+        currentIndex = 0;
+      }
+    }, 100); // Ajusta la velocidad de escritura aquí (en milisegundos)
+
+    return () => clearInterval(interval);
+  }, []);
+
+
 
     return (
         <div>
@@ -92,6 +111,16 @@ const [animatedText, setAnimatedText] = useState('');
                     </div>
                 </div>
             </div>
+
+            {/* Título "¿Por qué elegirnos?" con efecto de letras */}
+             <div className="chooseUsParteAbajo">
+                <h2>¿Ya sabes que servicio es para vos?</h2>
+                <p className="subtitle">
+                ¡Empecemos a crecer!
+                </p>
+                    <span className="animated-text">{animatedTextFormulario}</span>
+            </div>
+
            
         </div>
     );
