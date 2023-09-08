@@ -5,6 +5,7 @@
   h2{
     margin-top: 93px;
     text-align: center;
+    letter-spacing: 2px;
   }
   p{
     text-align: center;
@@ -37,28 +38,76 @@
     justify-content: center;
     flex-wrap: wrap;
     margin-bottom: 20px;
-    height: 100%; /* Establece la altura fija para todos los rectángulos */
+    height: 100%; 
 
     .service {
       width: 25%;
-      min-width: 250px; /* Establece un ancho mínimo para evitar que se hagan demasiado pequeños */
-      margin: 10px; /* Añade margen entre los rectángulos */   
+      min-width: 250px; 
+      margin: 10px;
       padding: 20px;
-      background-color: #f0f0f0;
+      background: linear-gradient(to bottom, #86c3ff, #924fae); 
       border-radius: 5px;
-      text-align: left;
       box-sizing: border-box;
+      border-radius: 50px; 
+      transition: transform 0.3s ease-in-out;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      img {
+        width: 160px; 
+        align-self: center;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+      }
+
+      &:hover {
+        transform: scale(1.05); /* Escalar ligeramente al hacer hover */
+      }
+
       
       h3 {
         font-size: 20px;
         margin-bottom: 10px;
+        color: white;
+        text-align: center;
       }
       
       p {
         font-size: 16px;
+        color: white;
+        text-align: center;
       }
     }
   }
+
 }
 
 
+    //Section por que elegirnos? 
+
+    .chooseUs {
+      background-color: black;
+      height: 400px;
+      text-align: center;
+      margin-top: 40px;  
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      clip-path: polygon(0 0, 100% 0, 100% 69%, 0% 100%);
+
+      h2{
+        color: white;
+      }
+    
+    .subtitle {
+      font-size: 20px;
+      margin-top: 10px;
+      color: white;     
+    }   
+    span{
+      color: rgb(255, 0, 0);
+    }
+  }
