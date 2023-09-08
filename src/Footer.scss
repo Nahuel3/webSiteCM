@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+// Footer.scss
+*{
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    font-size: 16px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-logo {
+    flex-basis: 30%;
+    max-width: 300px;
+    margin-right: 20px;
+
+    h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+}
+
+.footer-info,
+.footer-contact,
+.footer-social {
+    flex-basis: 20%;
+    margin-right: 20px;
+
+    p {
+        margin: 10px 0;
+    }
+
+    h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+  
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+      text-decoration: none;
+  
+      i {
+        font-size: 25px;
+        transition: transform 0.2s ease-in-out;
+        color: white;
+      }
+  
+      &:hover i {
+        transform: scale(1.1);
+      }
+  
+      
+      .whatsapp-icon {
+        background-color: #25d366;
+        padding: 8px; 
+      }
+  
+      .facebook-icon {
+        background-color: #1877f2;
+        padding: 8px; 
+      }
+  
+      .instagram-icon {
+        background-color: #bc2a8d;
+        padding: 8px;
+      }
+  
+     
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  
+  /* Media query para dispositivos móviles */
+@media (max-width: 800px) {
+    .footer-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-info,
+    .footer-contact,
+    .footer-social {
+      flex-basis: 50%; /* Asegura que cada elemento ocupe el 50% del ancho en dispositivos móviles */
+    }
+  
+    .footer-logo {
+      flex-basis: 100%; /* Hacemos que el logotipo ocupe el 100% del ancho en dispositivos móviles */
+      margin-bottom: 20px; /* Agregamos espacio inferior para separar los elementos */
+    }
+  
+    .footer-content {
+      flex-direction: column; /* Cambiamos la dirección de la columna para dispositivos móviles */
+    }
+  }
