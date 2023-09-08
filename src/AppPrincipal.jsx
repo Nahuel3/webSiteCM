@@ -1,18 +1,23 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './nav';
-import Section from "./section"
-import Main from "./main"
-import Footer from "./footer"
-
+import Section from './section';
+import Footer from './footer';
+import ServicesPage from './servicespage'; // Importa el componente de la página de servicios
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Section></Section>
-      <Main></Main>
-      <Footer></Footer>
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Section />} />
+          <Route path="/servicios" element={<ServicesPage />} />
+        </Routes>
+     
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

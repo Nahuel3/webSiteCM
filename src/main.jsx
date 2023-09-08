@@ -50,6 +50,8 @@ const Main = () => {
  
 
   return (
+
+    
     <div className="main-content">
       <Carousel
         showArrows={false} // Desactiva las flechas del carrusel

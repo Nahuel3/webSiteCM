@@ -1,5 +1,6 @@
 import React from 'react';
 import './sections.scss';
+import Main from './main';
 
 const MarketingComponent = () => {
 
@@ -41,7 +42,9 @@ const MarketingComponent = () => {
           </div>
         </div>
       </div>
+      <Main></Main>
     </div>
+    
   );
 };
 

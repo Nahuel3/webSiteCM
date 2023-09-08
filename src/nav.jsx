@@ -1,16 +1,13 @@
 import React, { useState } from 'react';
 import './App.scss';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [selectedButton, setSelectedButton] = useState('HOME'); // Botón "HOME" seleccionado por defecto
+  const location = useLocation(); // Obtener la ubicación actual para resaltar el botón correcto
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
-  };
-
-  const handleButtonClick = (button) => {
-    setSelectedButton(button);
   };
 
   return (
@@ -28,61 +25,50 @@ const Navbar = () => {
         {/* Lista de navegación */}
         <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
           <li>
-            <a
-              href="https://www.instagram.com/?hl=es"
-              className={selectedButton === 'HOME' ? 'selected' : ''}
-              onClick={() => handleButtonClick('HOME')}
-              target="_blank" rel="noreferrer"
+            <Link
+              to="/"
+              className={location.pathname === '/' ? 'selected' : ''}
             >
               HOME
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="https://www.instagram.com/?hl=es"
-              className={selectedButton === 'ACADEMIA' ? 'selected' : ''}
-              onClick={() => handleButtonClick('ACADEMIA')}
-              target="_blank" rel="noreferrer"
+            <Link
+              to="/academia"
+              className={location.pathname === '/academia' ? 'selected' : ''}
             >
               ACADEMIA
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="https://www.instagram.com/?hl=es"
-              className={selectedButton === 'SERVICIOS' ? 'selected' : ''}
-              onClick={() => handleButtonClick('SERVICIOS')}
-              target="_blank" rel="noreferrer"
+            <Link
+              to="/servicios"
+              className={location.pathname === '/servicios' ? 'selected' : ''}
             >
               SERVICIOS
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="https://www.instagram.com/?hl=es"
-              className={selectedButton === 'CONSULTORIAS' ? 'selected' : ''}
-              onClick={() => handleButtonClick('CONSULTORIAS')}
-              target="_blank" rel="noreferrer"
+            <Link
+              to="/consultorias"
+              className={location.pathname === '/consultorias' ? 'selected' : ''}
             >
               CONSULTORIAS 1a1
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="https://www.instagram.com/?hl=es"
-              className={selectedButton === 'ALUMNOS' ? 'selected' : ''}
-              onClick={() => handleButtonClick('ALUMNOS')}
-              target="_blank" rel="noreferrer"
+            <Link
+              to="/alumnos"
+              className={location.pathname === '/alumnos' ? 'selected' : ''}
             >
               ALUMNOS
-            </a>
+            </Link>
           </li>
           <li>
             <a
               href="https://wa.me/5491135206645?text=¡Hola! Quisiera hacerte una pregunta."
-              className={selectedButton === 'CONTACTO' ? 'selected' : ''}
-              onClick={() => handleButtonClick('CONTACTO')}
-              target="_blank" rel="noreferrer"
+              target="_blank"
+              rel="noreferrer"
             >
               CONTACTO
             </a>

@@ -1,0 +1,64 @@
+/* Estilos para la página de servicios */
+
+
+.servicesTitle{
+  h2{
+    margin-top: 93px;
+    text-align: center;
+  }
+  p{
+    text-align: center;
+  }
+}
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+  padding: 20px;
+
+  
+  
+  h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: black;
+   
+  }
+  
+  p {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+  
+  .service-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    height: 100%; /* Establece la altura fija para todos los rectángulos */
+
+    .service {
+      width: 25%;
+      min-width: 250px; /* Establece un ancho mínimo para evitar que se hagan demasiado pequeños */
+      margin: 10px; /* Añade margen entre los rectángulos */   
+      padding: 20px;
+      background-color: #f0f0f0;
+      border-radius: 5px;
+      text-align: left;
+      box-sizing: border-box;
+      
+      h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+
