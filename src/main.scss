@@ -122,11 +122,14 @@
       max-width: none; /* Elimina el ancho máximo */
      
     }
-
+    .image-container{
+      margin-bottom: 15px;
+    }
     
 
   }
 }
+
 
 /* Media query para pantallas más pequeñas, como tablets y teléfonos */
 @media (max-width: 550px) {

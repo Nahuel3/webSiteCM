@@ -159,13 +159,21 @@
   /* Media query para pantallas más pequeñas, como tablets y teléfonos */
 @media (max-width: 640px) {
 
+
    /* Estilos para el texto dentro del contenedor de "Bienvenido" */
    .welcome-container h2, .welcome-container h3 {
     line-height: 1.2; /* Ajusta el espacio entre líneas */
-    font-size: 44px;
     margin-bottom: 30px;
     color: #000000; /* Cambiar el color de la fuente a negro */
   }
 
   }
 
+  @media (max-width: 530px){
+    
+  .marketing-container{
+    h2{
+      font-size: 40px;
+    }
+  }
+  }
