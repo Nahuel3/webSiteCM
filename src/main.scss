@@ -38,13 +38,7 @@
       padding: 20px; /* Espacio interno */
       color: #333333;
       font-size: 25px;
-      text-shadow: 4px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra en el texto */
 
-
-      h2{
-        animation: canguro 2s infinite; /* Aplica la animación "canguro" de 2 segundos en bucle */
-        text-shadow: 4px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra en el texto */
-      }
 
     }
 
@@ -145,22 +139,22 @@
   }
 }
 
-
-@keyframes canguro {
-  0% {
-    transform: translateY(0); /* Sin desplazamiento vertical al principio */
-  }
-  25% {
-    transform: translateY(-100%); /* Mueve el texto hacia arriba al 25% del tiempo */
-  }
-  50% {
-    transform: translateY(-200%); /* Mueve el texto más hacia arriba al 50% del tiempo */
-  }
-  75% {
-    transform: translateY(-300%); /* Mueve el texto más hacia arriba al 75% del tiempo */
-  }
-  100% {
-    transform: translateY(0); /* Vuelve a la posición original al 100% del tiempo */
-  }
-}
+//animation: canguro 2s infinite; /* Aplica la animación "canguro" de 2 segundos en bucle */
+//@keyframes canguro {
+//  0% {
+//    transform: translateY(0); /* Sin desplazamiento vertical al principio */
+ // }
+ // 25% {
+ //   transform: translateY(-100%); /* Mueve el texto hacia arriba al 25% del tiempo */
+ // }
+//  50% {
+//    transform: translateY(-200%); /* Mueve el texto más hacia arriba al 50% del tiempo */
+//  }
+//  75% {
+ //   transform: translateY(-300%); /* Mueve el texto más hacia arriba al 75% del tiempo */
+ // }
+ // 100% {
+//    transform: translateY(0); /* Vuelve a la posición original al 100% del tiempo */
+//  }
+//}
 
