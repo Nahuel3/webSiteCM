@@ -40,7 +40,7 @@ const ServicesPage = () => {
 
 
     return (
-        <div>
+        <div className='animate__animated animate__fadeIn animate__faster'>
             {/* Título "¿Por qué elegirnos?" con efecto de letras */}
             <div className="chooseUs">
                 <h2>¿Por qué elegirnos?</h2>

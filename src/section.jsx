@@ -6,7 +6,7 @@ const MarketingComponent = () => {
 
 
   return (
-    <div>
+    <div className='animate__animated animate__fadeIn animate__faster'>
       <div className="marketing-container">
         <h2>Marketing Digital para Empresas y Emprendedores</h2>
         <h3>WE ARE A FULL SERVICE</h3>
@@ -16,7 +16,7 @@ const MarketingComponent = () => {
         </a>
       </div>
 
-      <div className="welcome-container ">
+      <div className="welcome-container  ">
         <h2 className="slide-from-top">¡Bienvenido!</h2>
         <h3 className="slide-from-top">¿En qué puedo ayudarte?</h3>
         <div className="blue-rectanglesPadre">
