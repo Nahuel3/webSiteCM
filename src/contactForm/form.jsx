@@ -18,9 +18,10 @@ const FormularioComponent = () => {
     nombre: false,
     email: false,
     mensaje: false,
+    mensajeContainsLetter: true, // Agregamos un estado para verificar si el mensaje contiene al menos una letra
   });
 
-  const [showSuccess, setShowSuccess] = useState(false); // Nuevo estado para mostrar mensaje de éxito
+  const [showSuccess, setShowSuccess] = useState(false); // Estado para mostrar el mensaje de éxito
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -28,15 +29,25 @@ const FormularioComponent = () => {
       ...formData,
       [name]: value,
     });
+    // Al cambiar el valor, establece que no hay errores para este campo.
     setErrors({
       ...errors,
       [name]: false,
     });
+
+    if (name === 'mensaje') {
+      // Verificar si el campo de mensaje contiene al menos una letra y actualizar el estado en consecuencia
+      setErrors({
+        ...errors,
+        mensajeContainsLetter: /[a-zA-Z]/.test(value),
+      });
+    }
   };
 
   const handleInputBlur = (e) => {
     const { name, value } = e.target;
     if (value === '') {
+      // Si el campo está vacío al hacer blur, establece el error.
       setErrors({
         ...errors,
         [name]: true,
@@ -55,6 +66,7 @@ const FormularioComponent = () => {
   };
 
   const isEmailValid = (email) => {
+    // Utiliza una expresión regular simple para verificar la estructura básica del correo electrónico.
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     return emailPattern.test(email);
   };
@@ -70,6 +82,15 @@ const FormularioComponent = () => {
 
     if (!isEmailValid(formData.email)) {
       alert('Debes ingresar un correo electrónico válido.');
+      return;
+    }
+
+    if (!errors.mensajeContainsLetter) {
+      // Si el campo de mensaje no contiene al menos una letra, muestra un mensaje de error
+      setErrors({
+        ...errors,
+        mensajeContainsLetter: false,
+      });
       return;
     }
 
@@ -94,7 +115,7 @@ const FormularioComponent = () => {
           whatsapp: '',
           mensaje: '',
         });
-        setShowSuccess(true); // Mostrar el mensaje de éxito
+        setShowSuccess(true);
       })
       .catch((error) => {
         console.error('Error al enviar el correo electrónico:', error);
@@ -108,6 +129,7 @@ const FormularioComponent = () => {
     <div className="form-bg-container">
       <div className="form-container animate__animated animate__fadeIn animate__faster">
         <form onSubmit={handleSubmit}>
+
           <div>
             <label
               htmlFor="nombre"
@@ -142,6 +164,7 @@ const FormularioComponent = () => {
               onChange={handleInputChange}
               onBlur={handleInputBlur}
               required
+
             />
             {errors.email && (
               <small className="error">Debes ingresar un correo electrónico válido.</small>
@@ -179,18 +202,14 @@ const FormularioComponent = () => {
               onBlur={handleInputBlur}
               required
             />
+            {!errors.mensajeContainsLetter && (
+              <small className="error">El campo de mensaje debe contener al menos una letra.</small>
+            )}
           </div>
 
           <button type="submit">Enviar</button>
         </form>
-        {showSuccess && (
-          <div className="success-message">
-            Mensaje enviado con éxito. ¡Gracias!
-          </div>
-        )}
-      </div>
-      <div id="custom-alert" className="alert custom-alert">
-        Por favor, complete los campos obligatorios.
+        {showSuccess && <div className="success-message">Mensaje enviado con éxito</div>}
       </div>
     </div>
   );
