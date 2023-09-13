@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import Navbar from './nav';
 import Section from './section';
 import Footer from './footer';
@@ -15,8 +15,9 @@ function App() {
           <Route path="/" element={<Section />} />
           <Route path="/servicios" element={<ServicesPage />} />
           <Route path="/contacto" element={<Form />} />
+          {/* Ruta comodín para redirigir a la página principal */}
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
-     
         <Footer />
       </div>
     </Router>
