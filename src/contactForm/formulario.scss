@@ -1,150 +1,136 @@
-
-/* FormularioComponent.scss */
-.form-container{
-    min-height: 100vh; /* Utiliza 100vh para ocupar toda la altura de la pantalla */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centra verticalmente */
-    align-items: center; /* Centra horizontalmente */
-    background: #50a3a2;
-    background: -webkit-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
-    background: -moz-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
-    background: -o-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
-    background: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%);
-    
-
 /* Contenedor del formulario con fondo */
 .form-bg-container {
-    width: 100%; /* Asegura que el fondo se extienda completamente */
-    background-color: #f0f0f0; /* Color de fondo del contenedor principal */
-  
-
-  }
-
-/* Contenedor principal del formulario */
-form {  
-  
-  max-width: 500px; /* Ancho máximo del formulario */
-  margin: 0 auto; /* Centra el formulario horizontalmente en la página */
-  padding: 60px; /* Espaciado interno del formulario */
-  border: 3px solid #ccc; /* Borde del formulario */
-  border-radius: 5px; /* Bordes redondeados */
-  background-color: #fff; /* Color de fondo del formulario */
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
-  margin-top: 80px;
-  
+  width: 100%; /* Asegura que el fondo se extienda completamente */
+  background-color: #f0f0f0; /* Color de fondo del contenedor principal */
 }
 
-/* Estilos para etiquetas de campo (placeholders) */
-label {
+/* FormularioComponent.scss */
+.form-container {
+  min-height: 100vh; /* Utiliza 100vh para ocupar toda la altura de la pantalla */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra verticalmente */
+  align-items: center; /* Centra horizontalmente */
+  background: #50a3a2;
+  background: -webkit-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
+  background: -moz-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
+  background: -o-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
+  background: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%);
 
-    transform: translateY(20px);
-    transition: all 0.3s;
-    pointer-events: none;
-    opacity: 0.6;
-    &.active {
-      transform: translateY(0);
-      font-size: 12px;
-      opacity: 1;
+  /* Contenedor principal del formulario */
+  form {
+    max-width: 500px; /* Ancho máximo del formulario */
+    margin: 0 auto; /* Centra el formulario horizontalmente en la página */
+    padding: 60px; /* Espaciado interno del formulario */
+    border: 3px solid #ccc; /* Borde del formulario */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #fff; /* Color de fondo del formulario */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-top: 80px;
+
+    /* Estilos para etiquetas de campo (placeholders) */
+    label {
+      transform: translateY(20px);
+      transition: all 0.3s;
+      pointer-events: none;
+      opacity: 0.6;
+      &.active {
+        transform: translateY(0);
+        font-size: 12px;
+        opacity: 1;
+      }
+    }
+
+    /* Estilo para campos de entrada de texto y correo electrónico */
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+      font-family: 'Montserrat', sans-serif; /* Cambia 'Montserrat' al tipo de letra que prefieras */
+      width: 100%; /* Ancho completo */
+      padding: 10px; /* Espaciado interno */
+      margin-bottom: 15px; /* Espaciado inferior entre campos */
+      border: 1px solid #ccc; /* Borde de campo */
+      border-radius: 4px; /* Bordes redondeados */
+      font-size: 16px; /* Tamaño de fuente */
+    }
+
+    /* Estilo para el borde rojo al hacer clic en el campo y luego salir sin completarlo */
+    input[type="text"]:focus:invalid,
+    input[type="email"]:focus:invalid,
+    input[type="tel"]:focus:invalid,
+    textarea:focus:invalid {
+      border: 2px solid red; /* Cambia el color del borde a rojo */
+    }
+
+    label.error {
+      color: red;
+      // Otros estilos...
+    }
+
+    small {
+      position: relative;
+      bottom: 4px;
+    }
+
+    /* Estilo para el campo de mensaje */
+    textarea {
+      max-height: 200px; /* Altura máxima del campo de mensaje */
+      resize: vertical; /* Permite redimensionar verticalmente */
+    }
+
+    /* Estilo para el botón de enviar */
+    button {
+      background-color: #007bff; /* Color de fondo del botón */
+      color: #fff; /* Color de texto del botón */
+      border: none; /* Sin borde */
+      padding: 10px 20px; /* Espaciado interno */
+      border-radius: 16px; /* Bordes redondeados */
+      cursor: pointer; /* Cursor de puntero al pasar el ratón */
+      font-size: 18px; /* Tamaño de fuente */
+    }
+
+    /* Estilo para el botón de enviar al pasar el ratón */
+    button:hover {
+      background-color: #0056b3; /* Cambia el color de fondo al pasar el ratón */
+    }
+
+    /* Estilo para mensajes de alerta */
+    .alert {
+      background-color: #f44336; /* Color de fondo de alerta (rojo) */
+      color: #fff; /* Color de texto de alerta (blanco) */
+      padding: 10px 20px; /* Espaciado interno */
+      border-radius: 4px; /* Bordes redondeados */
+      margin-top: 15px; /* Espaciado superior entre alertas y formulario */
+      text-align: center; /* Centra el texto */
+      display: none; /* Inicialmente oculta la alerta */
+    }
+
+    /* Estilo para mensajes de éxito */
+    .success {
+      background-color: #4CAF50; /* Color de fondo de éxito (verde) */
+      color: #fff; /* Color de texto de éxito (blanco) */
+    }
+
+    .success-message {
+      text-align: center;
     }
   }
 
-/* Estilo para campos de entrada de texto y correo electrónico */
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea {
-  font-family: 'Montserrat', sans-serif; /* Cambia 'Montserrat' al tipo de letra que prefieras */
-  width: 100%; /* Ancho completo */
-  padding: 10px; /* Espaciado interno */
-  margin-bottom: 15px; /* Espaciado inferior entre campos */
-  border: 1px solid #ccc; /* Borde de campo */
-  border-radius: 4px; /* Bordes redondeados */
-  font-size: 16px; /* Tamaño de fuente */
-
-}
-/* Estilo para el borde rojo al hacer clic en el campo y luego salir sin completarlo */
-input[type="text"]:focus:invalid,
-input[type="email"]:focus:invalid,
-input[type="tel"]:focus:invalid,
-textarea:focus:invalid {
-  border: 2px solid red; /* Cambia el color del borde a rojo */
-}
-label.error {
-    color: red;
-    // Otros estilos...
+  @media (max-width: 655px) {
+    form {
+      max-width: 300px;
+    }
   }
 
-  
-  small{
-   position: relative;
-   bottom: 4px;
-  } 
-/* Estilo para el campo de mensaje */
-textarea {
-  max-height: 200px; /* Altura máxima del campo de mensaje */
-  
-  resize: vertical; /* Permite redimensionar verticalmente */
-}
+  @media (max-width: 480px) {
+    form {
+      max-width: 200px;
 
-/* Estilo para el botón de enviar */
-button {
-  background-color: #007bff; /* Color de fondo del botón */
-  color: #fff; /* Color de texto del botón */
-  border: none; /* Sin borde */
-  padding: 10px 20px; /* Espaciado interno */
-  border-radius: 16px; /* Bordes redondeados */
-  cursor: pointer; /* Cursor de puntero al pasar el ratón */
-  font-size: 18px; /* Tamaño de fuente */
-}
-
-/* Estilo para el botón de enviar al pasar el ratón */
-button:hover {
-  background-color: #0056b3; /* Cambia el color de fondo al pasar el ratón */
-}
-
-/* Estilo para mensajes de alerta */
-.alert {
-  background-color: #f44336; /* Color de fondo de alerta (rojo) */
-  color: #fff; /* Color de texto de alerta (blanco) */
-  padding: 10px 20px; /* Espaciado interno */
-  border-radius: 4px; /* Bordes redondeados */
-  margin-top: 15px; /* Espaciado superior entre alertas y formulario */
-  text-align: center; /* Centra el texto */
-  display: none; /* Inicialmente oculta la alerta */
-}
-
-/* Estilo para mensajes de éxito */
-.success {
-  background-color: #4CAF50; /* Color de fondo de éxito (verde) */
-  color: #fff; /* Color de texto de éxito (blanco) */
-}
-
-.success-message{
-  text-align: center;
-}
-}
-
-
-@media (max-width: 655px) {
-   form{
-    
-    max-width: 300px;
-   }
-}
-
-@media (max-width: 480px) {
-  form{
-   
-   max-width: 200px;
-
-   button{
-    display: block; /* Hacer que el botón sea un bloque para centrarlo */
-    margin: 0 auto; /* Centrar horizontalmente */
+      button {
+        display: block; /* Hacer que el botón sea un bloque para centrarlo */
+        margin: 0 auto; /* Centrar horizontalmente */
+      }
+    }
   }
-  }
-
- 
-
-  
 }
