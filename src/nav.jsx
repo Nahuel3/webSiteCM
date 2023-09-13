@@ -65,13 +65,12 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <a
-              href="https://wa.me/5491135206645?text=¡Hola! Quisiera hacerte una pregunta."
-              target="_blank"
-              rel="noreferrer"
+          <Link
+              to="/contacto"
+              className={location.pathname === '/contacto' ? 'selected' : ''}
             >
               CONTACTO
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
