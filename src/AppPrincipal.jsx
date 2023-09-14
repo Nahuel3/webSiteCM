@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import Navbar from './nav';
 import Section from './section';
-import Footer from './footer';
+import Footer from './footer/footer';
 import ServicesPage from './servicespage'; // Importa el componente de la página de servicios
 import Form from "./contactForm/form"
 
