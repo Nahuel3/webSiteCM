@@ -186,3 +186,14 @@
       }
     }
   }
+
+  /* Establece la altura fija en pantallas más pequeñas */
+  @media (max-height: 540px) {
+   .marketing-container{
+     height: 100%;
+
+     h2{
+      margin-top: 80px ;
+     }
+   }
+  }
