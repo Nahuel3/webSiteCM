@@ -26,7 +26,7 @@
     border-radius: 5px; /* Bordes redondeados */
     background-color: #fff; /* Color de fondo del formulario */
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    margin-top: 80px;
+    margin-top: 92px;
 
     /* Estilos para etiquetas de campo (placeholders) */
     label {
@@ -130,6 +130,20 @@
       button {
         display: block; /* Hacer que el botón sea un bloque para centrarlo */
         margin: 0 auto; /* Centrar horizontalmente */
+      }
+    }
+  }
+}
+
+
+ /* Establece la altura fija en pantallas más pequeñas */
+@media (max-height: 540px) {
+  .form-bg-container {
+    .form-container {
+      form {
+        margin: 80px ; /* Agrega margen superior e inferior */
+        margin-top: calc(80px + 92px);
+       
       }
     }
   }
