@@ -8,19 +8,21 @@ const Footer = () => {
         <footer className="footer">
             <div className="footer-content">
                 <div className="footer-logo">
-                    <h2>Swann Marketing</h2>
+                    <h2>GlowNet</h2>
                     <p>¡Nuestra misión es hacerte crecer!</p>
                 </div>
                 <div className="footer-info">
-                    <p>SWANN MARKETING LLC</p>
-                    <p>Hollywood, Florida.</p>
-                    <p>© 2016. All rights reserved.</p>
+                    <p>GlowNet</p>
+                    <p>Argentina</p>
+                    <p>© 2023. All rights reserved.</p>
                 </div>
                 <div className="footer-contact">
-                    <h3>¡Sigamos en Contacto!</h3>
-                    <p>¡Consultorias Personalizadas!</p>
-                    <p>¿Necesitas un aliado estratégico para hacer crecer tu marca?</p>
-                    <p>¡Nuestras consultorías son para vos!</p>
+                    <h3>Servicios</h3>
+                    <p>¡Manejo Redes Sociales!</p>
+                    <p>!Publicidad!</p>
+                    <p>¡Diseño Web!</p>
+                    <p>¡Email Marketing!</p>
+                    <p>¡Identidad De Marca!</p>
                 </div>
                 <div className="footer-social">
                     <h3>Redes Sociales</h3>

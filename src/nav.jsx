@@ -29,15 +29,15 @@ const Navbar = () => {
               to="/"
               className={location.pathname === '/' ? 'selected' : ''}
             >
-              HOME
+              Inicio
             </Link>
           </li>
           <li>
             <Link
               to="/academia"
-              className={location.pathname === '/academia' ? 'selected' : ''}
+              className={location.pathname === '/nosotras' ? 'selected' : ''}
             >
-              ACADEMIA
+             Nosotras
             </Link>
           </li>
           <li>
@@ -45,31 +45,18 @@ const Navbar = () => {
               to="/servicios"
               className={location.pathname === '/servicios' ? 'selected' : ''}
             >
-              SERVICIOS
+              Servicios
             </Link>
           </li>
-          <li>
-            <Link
-              to="/consultorias"
-              className={location.pathname === '/consultorias' ? 'selected' : ''}
-            >
-              CONSULTORIAS 1a1
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/alumnos"
-              className={location.pathname === '/alumnos' ? 'selected' : ''}
-            >
-              ALUMNOS
-            </Link>
-          </li>
+
+      
+         
           <li>
           <Link
               to="/contacto"
               className={location.pathname === '/contacto' ? 'selected' : ''}
             >
-              CONTACTO
+              Contacto
             </Link>
           </li>
         </ul>

@@ -22,13 +22,13 @@ const Main = () => {
     {
       nombre: 'Belen',
       descripcion:
-        'Belén es una Community Manager apasionada y creativa con un profundo conocimiento de las redes sociales y la gestión de comunidades en línea. Con un enfoque en la construcción de relaciones sólidas con los seguidores, Belén se destaca en la creación de contenido atractivo y en la gestión de la presencia en línea de una marca. Su habilidad para comprender las tendencias actuales y adaptarse a los cambios en el mundo digital la convierte en una experta en conectar marcas con su audiencia de manera efectiva.',
+        'Mi nombre es Belén Turín, soy Community Manager, Trafficker y Emprendedora. Con mi socia decidimos fundar 𝗚𝗹𝗼𝘄𝗡𝗲𝘁 para ayudar a empresas y emprendedores a crecer en el mundo digital.⁣      ⁣    ¡Llevo más de dos años trabajando con el Marketing Digital! Me inicié como Community Manager y luego decidí sumar publicidad, para poder ofrecer más servicios a mis clientes.¡El momento de llevar tu empresa al éxito es hoy!',
       imagenes: [
-        'https://pps.whatsapp.net/v/t61.24694-24/345015822_539374261736764_3512846946091240652_n.jpg?ccb=11-4&oh=01_AdQlTffLQookynMnlYJ4G9UdtkHv3P3HbZKU-H42_xwedQ&oe=64FE0F14&_nc_cat=102',
+        'https://img.freepik.com/foto-gratis/retrato-joven-rubio-mujer_273609-12060.jpg',
         'https://pps.whatsapp.net/v/t61.24694-24/310558651_565378178371191_6360899242281261324_n.jpg?ccb=11-4&oh=01_AdQImACnWaj5OlKpg4C2Th92WtqGDks5PUn5pxlVo4zGOA&oe=64FDEEE6&_nc_cat=100',
       ],
     },
-  
+
   ];
 
   // Función para cambiar la imagen de la persona seleccionada
@@ -47,44 +47,25 @@ const Main = () => {
     };
   }, []);
 
- 
+
 
   return (
-
-    
     <div className="main-content">
-      <Carousel
-        showArrows={false} // Desactiva las flechas del carrusel
-        showThumbs={false}
-        swipeable={false} // Desactiva el desplazamiento táctil
-        selectedItem={selectedPersona} // Establece la persona seleccionada
-        onChange={(index) => setSelectedPersona(index)} // Maneja el cambio de persona seleccionada
-       
-        
-      >
-        {personas.map((persona, index) => (
-          <div
-            key={index}
-            className={`carousel-item ${index !== selectedPersona ? 'hidden' : ''}`} // Agrega la clase 'hidden' a las personas que no están seleccionadas
-          >
-            <div className="carousel-content">
-              <div className="text-container">
-                <h2>{persona.nombre}</h2>
-                <p>{persona.descripcion}</p>
-              </div>
-              <div className="image-container">
-                <div className="image-border" onClick={handleChangeImage}>
-                  <img
-                    src={persona.imagenes[selectedImageIndex]}
-                    alt={`Imagen de ${persona.nombre}`}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
-      </Carousel>
-    </div>
+    {personas.map((persona, index) => (
+      <div className="person-container" key={index}>
+        <div className="text-container">
+          <h2>{persona.nombre}</h2>
+          <p>{persona.descripcion}</p>
+        </div>
+        <div className="image-container">
+          <img
+            src={persona.imagenes[0]}
+            alt={`Imagen de ${persona.nombre}`}
+          />
+        </div>
+      </div>
+    ))}
+  </div>
   );
 };
 

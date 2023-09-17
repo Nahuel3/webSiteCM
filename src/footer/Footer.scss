@@ -27,6 +27,7 @@
     flex-basis: 30%;
     max-width: 300px;
     margin-right: 20px;
+    margin-left: 50px;
 
     h2 {
         font-size: 24px;
@@ -120,6 +121,7 @@
     .footer-logo {
       flex-basis: 100%; /* Hacemos que el logotipo ocupe el 100% del ancho en dispositivos móviles */
       margin-bottom: 20px; /* Agregamos espacio inferior para separar los elementos */
+      margin-left: 0px;
     }
   
     .footer-content {
