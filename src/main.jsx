@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './main.scss';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import { Carousel } from 'react-responsive-carousel';
+
 
 const Main = () => {
   // Índice de la persona seleccionada
@@ -24,16 +24,16 @@ const Main = () => {
       descripcion:
         'Mi nombre es Belén Turín, soy Community Manager, Trafficker y Emprendedora. Con mi socia decidimos fundar 𝗚𝗹𝗼𝘄𝗡𝗲𝘁 para ayudar a empresas y emprendedores a crecer en el mundo digital.⁣      ⁣    ¡Llevo más de dos años trabajando con el Marketing Digital! Me inicié como Community Manager y luego decidí sumar publicidad, para poder ofrecer más servicios a mis clientes.¡El momento de llevar tu empresa al éxito es hoy!',
       imagenes: [
+        'https://img.freepik.com/foto-gratis/foto-estudio-encantadora-joven-rubia-peinado-casual-mirando-camara-amplia-sonrisa-alegre-pie-sobre-fondo-rosa-blusa-blanca-falda-flores-manos-abajo_295783-6455.jpg',
         'https://img.freepik.com/foto-gratis/retrato-joven-rubio-mujer_273609-12060.jpg',
-        'https://pps.whatsapp.net/v/t61.24694-24/310558651_565378178371191_6360899242281261324_n.jpg?ccb=11-4&oh=01_AdQImACnWaj5OlKpg4C2Th92WtqGDks5PUn5pxlVo4zGOA&oe=64FDEEE6&_nc_cat=100',
       ],
     },
 
   ];
 
-  // Función para cambiar la imagen de la persona seleccionada
-  const handleChangeImage = () => {
-    setSelectedImageIndex((prevIndex) => (prevIndex + 1) % 2);
+   // Función para cambiar la imagen de la persona seleccionada
+   const handleChangeImage = () => {
+    setSelectedImageIndex((prevIndex) => (prevIndex + 1) % personas[selectedPersona].imagenes.length);
   };
 
   useEffect(() => {
@@ -45,12 +45,11 @@ const Main = () => {
     return () => {
       clearInterval(imageInterval);
     };
-  }, []);
-
+  }, [selectedPersona]);
 
 
   return (
-    <div className="main-content">
+    <div id="nosotras" className="main-content">
     {personas.map((persona, index) => (
       <div className="person-container" key={index}>
         <div className="text-container">
@@ -59,7 +58,7 @@ const Main = () => {
         </div>
         <div className="image-container">
           <img
-            src={persona.imagenes[0]}
+            src={persona.imagenes[selectedImageIndex]}
             alt={`Imagen de ${persona.nombre}`}
           />
         </div>

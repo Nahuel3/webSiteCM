@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.scss';
 import { Link, useLocation } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll'; // Importa Link y Element desde react-scroll
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,7 +15,7 @@ const Navbar = () => {
     <header>
       <div className={`navbar-container ${menuOpen ? 'open' : ''}`}>
         <div className="logo">
-          <img src="https://swann.marketing/wp-content/uploads/2022/03/PNG-WEB-SWANN-32.png" alt="Logo" />
+          <img src="/logo.jpg" alt="Logo" />
         </div>
         {/* Botón de hamburguesa solo visible en pantallas más pequeñas */}
         <button className="menu-button" onClick={toggleMenu}>
@@ -33,12 +34,14 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link
-              to="/academia"
+          <ScrollLink // Usa ScrollLink en lugar de Link
+              to="nosotras" // El valor debe coincidir con el ID de la sección en Main
+              smooth={true}
+              duration={500}
               className={location.pathname === '/nosotras' ? 'selected' : ''}
             >
-             Nosotras
-            </Link>
+              Nosotras
+            </ScrollLink>
           </li>
           <li>
             <Link

@@ -1,160 +1,78 @@
-/* Estilos para la página de servicios */
-
-
-.servicesTitle{
-  h2{
-    margin-top: 30px;
-    padding-bottom: 15px;
-    text-align: center;
-    letter-spacing: 2px;
-  }
-  p{
-    text-align: center;
-    
-  }
-}
-
 .services-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   text-align: center;
-  padding: 20px;
+  margin-top: 125px;
+  margin-bottom: 125px;
+  
 
-  
-  
-  h2 {
-    font-size: 28px;
+  h1 {
+    font-size: 2rem;
     margin-bottom: 20px;
-    color: black;
-   
-  }
-  
-  p {
-    font-size: 16px;
-    margin-bottom: 40px;
-  }
-  
-  .service-group {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap; 
-    height: 100%; 
-
-    .service {
-      width: 25%;
-      min-width: 250px; 
-      margin: 10px;
-      margin-bottom: 20px;
-      padding: 20px;
-      background: linear-gradient(to bottom, #86c3ff, #924fae); 
-      border-radius: 5px;
-      box-sizing: border-box;
-      border-radius: 50px; 
-      transition: transform 0.3s ease-in-out;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-
-      img {
-        width: 160px; 
-        align-self: center;
-        clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
-      }
-
-      &:hover {
-        transform: scale(1.05); /* Escalar ligeramente al hacer hover */
-      }
-
-      
-      h3 {
-        font-size: 20px;
-        margin-bottom: 10px;
-        color: white;
-        text-align: center;
-      }
-      
-      p {
-        font-size: 16px;
-        color: white;
-        text-align: center;
-      }
-    }
-  }
-
-}
-
-
-    //Section por que elegirnos? 
-
-    .chooseUs {
-      background-color: black;
-      height: 400px;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      clip-path: polygon(0 0, 100% 0, 100% 69%, 0% 100%);
-
-      h2{
-        color: white;
-      }
     
-    .subtitle {
-      font-size: 20px;
-      margin-top: 10px;
-      color: white;     
-    }   
-    span{
-      color: rgb(255, 0, 0);
-    }
   }
 
-  .chooseUsParteAbajo{
-    clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
-    background-color: black;
-    height: 400px;
-    text-align: center;
-    margin-top: 40px;  
+  .services-icons {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-bottom: 50px;
+    margin-top: 50px;
     flex-wrap: wrap;
-   
+    
+ 
+    .service-icon-container {
+      
+      width: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+      
 
-    h2{
-      color: white;
+      .service-icon {
+        width: 80px;
+        height: 80px;
+        background-color: #007bff;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 24px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+
+      p {
+        margin-top: 10px;
+        font-size: 1rem;
+      }
     }
-  
-  .subtitle {
-    font-size: 20px;
-    margin-top: 10px;
-    color: white;     
-  }   
-  span{
-    color: rgba(232, 255, 105, 0.648);
   }
 
-  // Estilos para el botón
-  button {
-    background-color: #bb00ff; // Color de fondo azul
-    color: #fff; // Texto en blanco
-    font-size: 26px;
-    border: none;   
-    cursor: pointer;
-    margin-top: 20px; // Añade margen superior
-    height: 50px;
-    width: 200px;
-    border-radius: 15px; // Agrega bordes redondeados al botón
-  }
+  .service-definitions {
+    text-align: center; // Centra el texto horizontalmente
+    padding: 20px;
+    border: 3px solid #ccc;
+    border-radius: 5px;
+    background-color: #f0f0f055; // Color de fondo para el rectángulo
+    width: 50%;
+    margin: 0 auto;
+    
+ 
 
-  // Estilos para el botón al pasar el mouse
-  button:hover {
-    background-color: #b30000; // Color de fondo azul más oscuro al pasar el mouse
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 50px;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 40px;
+      text-align: center;
+    }
   }
 }
-  
