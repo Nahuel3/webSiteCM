@@ -112,12 +112,12 @@ const ServicesPage = () => {
               Mantenemos una comunicación abierta y transparente en cada etapa de nuestro trabajo, desde la planificación hasta la ejecución y el análisis. Nuestro compromiso con la satisfacción del cliente se refleja en nuestra respuesta rápida a tus necesidades.
             </p>
             <div className='logo-rectangle'>
-              <img src="/logo.jpg" alt="" />
+              <img  src="/logo.jpg" alt="" />
             </div>
           </div>
 
           <div className='rectangle'>
-            <h3>Resultados Tangibles</h3>
+            <h3 >Resultados Tangibles</h3>
             <p>
               Nos enorgullece entregar resultados que puedes ver y medir. Nuestros casos de éxito hablan por sí mismos, desde aumentos en el tráfico web hasta conversiones que impulsan el crecimiento.
             </p>
@@ -127,7 +127,7 @@ const ServicesPage = () => {
           </div>
 
           <div className='rectangle'>
-            <h3>Lluvia de ideas</h3>
+            <h3 >Lluvia de ideas</h3>
             <p>
               Nos mantenemos actualizados con las últimas tendencias y tecnologías del marketing digital para garantizar que tu negocio esté siempre un paso adelante. Estaremos compartiendo ideas para lograr viralidad.
             </p>
