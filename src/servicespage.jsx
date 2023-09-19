@@ -6,7 +6,7 @@ const ServicesPage = () => {
   return (
     <div className='services-container'>
       <h1>SERVICIOS DE MARKETING DIGITAL</h1>
-      
+
       {/* Sección de iconos y nombres */}
       <div className='services-icons'>
         <ScrollLink
@@ -102,6 +102,42 @@ const ServicesPage = () => {
           </p>
         </Element>
       </div>
+
+      <div className='why-choose-us'>
+        <h2>¿Por qué elegirnos?</h2>
+        <div className='main-rectangles'>
+          <div className='rectangle'>
+            <h3>Atención personalizada</h3>
+            <p>
+              Mantenemos una comunicación abierta y transparente en cada etapa de nuestro trabajo, desde la planificación hasta la ejecución y el análisis. Nuestro compromiso con la satisfacción del cliente se refleja en nuestra respuesta rápida a tus necesidades.
+            </p>
+            <div className='logo-rectangle'>
+              <img src="/logo.jpg" alt="" />
+            </div>
+          </div>
+
+          <div className='rectangle'>
+            <h3>Resultados Tangibles</h3>
+            <p>
+              Nos enorgullece entregar resultados que puedes ver y medir. Nuestros casos de éxito hablan por sí mismos, desde aumentos en el tráfico web hasta conversiones que impulsan el crecimiento.
+            </p>
+            <div className='logo-rectangle'>
+              <img src="/logo.jpg" alt="" />
+            </div>
+          </div>
+
+          <div className='rectangle'>
+            <h3>Lluvia de ideas</h3>
+            <p>
+              Nos mantenemos actualizados con las últimas tendencias y tecnologías del marketing digital para garantizar que tu negocio esté siempre un paso adelante. Estaremos compartiendo ideas para lograr viralidad.
+            </p>
+            <div className='logo-rectangle'>
+              <img src="/logo.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   );
 };
