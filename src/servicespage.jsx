@@ -13,6 +13,7 @@ const ServicesPage = () => {
           to='redes-sociales'
           smooth={true}
           duration={500}
+          offset={-105} // Ajusta el valor según la altura de tu encabezado
         >
           <div className='service-icon-container'>
             <img src='/logo.jpg' alt='Icono Redes Sociales' className='service-icon' />
@@ -24,6 +25,7 @@ const ServicesPage = () => {
           to='identidad-marca'
           smooth={true}
           duration={500}
+          offset={-105} // Ajusta el valor según la altura de tu encabezado
         >
           <div className='service-icon-container'>
             <img src='/logo.jpg' alt='Icono Identidad de Marca' className='service-icon' />
@@ -35,6 +37,7 @@ const ServicesPage = () => {
           to='publicidad'
           smooth={true}
           duration={500}
+          offset={-105} // Ajusta el valor según la altura de tu encabezado
         >
           <div className='service-icon-container'>
             <img src='/logo.jpg' alt='Icono Publicidad' className='service-icon' />
@@ -46,6 +49,7 @@ const ServicesPage = () => {
           to='diseño-web'
           smooth={true}
           duration={500}
+          offset={-105} // Ajusta el valor según la altura de tu encabezado
         >
           <div className='service-icon-container'>
             <img src='/logo.jpg' alt='Icono Diseño Web' className='service-icon' />
@@ -57,6 +61,7 @@ const ServicesPage = () => {
           to='e-marketing'
           smooth={true}
           duration={500}
+          offset={-105} // Ajusta el valor según la altura de tu encabezado
         >
           <div className='service-icon-container'>
             <img src='/logo.jpg' alt='Icono E-Marketing' className='service-icon' />
