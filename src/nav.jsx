@@ -38,7 +38,7 @@ const Navbar = () => {
               to="nosotras" // El valor debe coincidir con el ID de la sección en Main
               smooth={true}
               duration={500}
-              offset={-105}
+              offset={-100}
               className={location.pathname === '/nosotras' ? 'selected' : ''}
             >
               Nosotras
